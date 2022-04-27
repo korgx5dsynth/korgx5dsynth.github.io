@@ -1,9 +1,5 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    </head>
-
     <body>
         <div style="text-align: center;">
             <span id="resumeviews" style="1px solid black;font-size:15px;" align="center"></span><br>
@@ -125,41 +121,7 @@ Worked on embedded systems running on Nucleus RTOS and embedded Linux C/C++ prog
 <p>Others</p>
 <ul>
 <li>Chess expert lichess.org rapid rating 2100+</li>
-<li>Other hobbies: poker, piano</li>
+<li>Other hobbies: music, chess</li>
 </ul>
-    <script>
-        $(document).ready(function() {
-            $.ajax({
-                url: "https://jsonip.com",
-                type: "GET",
-                success: function (result) {
-                    console.log(result);
-                    //document.getElementById("x").innerHTML = result["ip"];
-                    /* test spring boot url handling */
-                    $(document).ready(function() {
-                    	$.ajax({
-                    		url: "https://cors-anywhere.herokuapp.com/https://eigenfield.herokuapp.com/visit/" + result["ip"],
-                    		type: "GET",
-                            headers: {
-                                "x-requested-with": "xhr"
-                            },
-                    		success: function (result) {
-                    			console.log(result);
-                    			document.getElementById("resumeviews").innerHTML = result;
-                    		},
-                    		error: function (error) {
-                    			console.log(error);
-                    		}
-                    	})
-                    })
-                    /////////////
-                },
-                error: function (error) {
-                    console.log(error);
-                }
-            })
-        })
-
-    </script>
 </body>
 </html>
